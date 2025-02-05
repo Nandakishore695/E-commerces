@@ -2,7 +2,7 @@ import create from "zustand";
 
 export const useUserStore= create((set,get)=>({
 user:null,
-loding:flase,
+loding:false,
 checkAuth:true,
 
 
@@ -10,5 +10,7 @@ checkAuth:true,
 signup:async({name,email,password,confirmpassword})=>{
 set:{loading:true}
 }
-
+if(passsword!===confirmpassword){
+   set({loading:false}) 
+}return toast.error("passwords doesnot mach")
 })

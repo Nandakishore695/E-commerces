@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
@@ -16,6 +17,15 @@ function App() {
           <Route path="/login" element={<LoginPage></LoginPage>}></Route>
         </Routes>
       </div>
+=======
+import './App.css'
+
+function App() {
+
+  return (
+    <>
+      <h1>Hello client</h1>
+>>>>>>> 6021cfd04aa7483eb1d584ff2e7d9f3d5c65df03
     </>
   );
 }
