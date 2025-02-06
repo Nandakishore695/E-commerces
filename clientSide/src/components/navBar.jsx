@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.jpg"
 
 function NavBar() {
     const isUser = true;
@@ -8,7 +7,7 @@ function NavBar() {
     return (
         <header>
             <nav>
-                <Link to="/"><img src={logo} width={100}/></Link>
+                <Link to="/">E-Commerce</Link>
                 {isUser && (
                     <div>
                         <Link to="/" ><button>Home</button></Link>
