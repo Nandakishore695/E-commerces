@@ -1,9 +1,9 @@
 import './App.css'
-import {Routes, Route } from "react-router-dom";
-import HomePage from './pages/homePage.jsx';
+import {Routes, Route, Navigate } from "react-router-dom";
 import SignUpPage from './pages/singUpPage.jsx';
 import LoginPage from  "./pages/LoginPage.jsx";
 import NavBar from './components/navbar.jsx';
+import CartPage from './pages/cartPage.jsx';
 
 function App() {
 
@@ -11,9 +11,10 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        {/* <Route path='/' element={<HomePage/>}/> */}
+        <Route path='/' element={<Navigate to="/signup" />} />
         <Route path='login' element={<LoginPage/>}/>
         <Route path='signup' element={<SignUpPage/>}/>
+        <Route path='cart' element={<CartPage/>}/>
       </Routes>
     </>
   )
