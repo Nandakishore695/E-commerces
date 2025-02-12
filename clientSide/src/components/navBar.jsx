@@ -1,20 +1,24 @@
 import { Link } from "react-router-dom";
-import { ShoppingCart, LogOut, Lock, UserPlus } from "lucide-react";
+import { ShoppingCart, LogOut, Lock, UserPlus, User } from "lucide-react";
 
 function NavBar() {
-    const isUser = false;
-    const isAdmin = true;
+    const isUser = true;
+    const isAdmin = false;
 
     return (
-        <header className="bg-[#101D27] flex justify-between px-8 ">
-            <Link to={"/"} className="text-[#14b380] text-2xl font-bold p-4">E-Commerce</Link>
+        <header className="bg-[#F4F4F5] flex justify-between px-8 ">
+            <Link to={"/"} className="text-[#2CAC5B] text-2xl font-bold p-4">E-Commerce</Link>
             <nav className="flex items-center px-8">
-                <Link to={"/"} className="text-white mx-2" >Home</Link>
+                <input className="border-gray-600" />
+                <Link to={"/"} className="mx-2" >Home</Link>
                 {isUser && (
                     <ul className=" flex justify-around p-4 items-center ">
                         <li className="flex mx-2 px-2 py-2">
-                            <ShoppingCart color="white" />
-                            <Link to={"/cart"} className="text-white mx-2">Cart</Link>
+                           <Link to={"/"} ><User /></Link>
+                        </li>
+                        
+                        <li className="flex mx-2 px-2 py-2">
+                           <Link to={"/cart"} ><ShoppingCart/></Link>
                         </li>
                     </ul>
                 )}
@@ -41,7 +45,7 @@ function NavBar() {
                     </>)}
                 {isAdmin && (
                     <ul className=" flex justify-around p-4 items-center ">
-                        <li className="flex bg-[#14b380] rounded mx-2 px-2 py-2">
+                        <li className="flex bg-[#2CAC5B] rounded mx-2 px-2 py-2">
                             <Lock color="white" />
                             <Link className="text-white px-2">Dashboard</Link>
                         </li>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function SignUpPage() {
  const [signUpFormData, setSignUpFormdata] = useState({signUpFullName: "", signUpEmail: "", signUpPassword: "", signUpConfirmPassword: "",});
